@@ -1,0 +1,8 @@
+E001,John Smith,john.smith@email.com,Cairo,0100000001
+E002,Mary Johnson,mary.j@email.com,Giza,0100000002
+E003,Ahmed Ali,ahmed.ali@email.com,Alexandria,0100000003
+E004,Ali,ahmed.ali@email.com,Alexandria,0100000004
+E006,fady,john.smith@email.com,Cairo,0100000005
+E007,shaban,mary.j@email.com,Giza,0100000006
+E008,khaled,ahmed.ali@email.com,Alexandria,0100000007
+E409956,felopateer,felopateer@gmail.com,alex,01225525117
