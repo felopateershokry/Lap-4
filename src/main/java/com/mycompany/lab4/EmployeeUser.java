@@ -38,8 +38,8 @@ public class EmployeeUser {
         String fileName = "Employees.txt";
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true))) {
             writer.write(lineRepresentation());
-            writer.newLine(); // move to next line
-            System.out.println("Employee " + employeeId + " saved successfully to " + fileName);
+            writer.newLine();
+//            System.out.println("Employee " + employeeId + " saved successfully to " + fileName);
         } catch (IOException e) {
             System.out.println("Error saving employee:");
         }
