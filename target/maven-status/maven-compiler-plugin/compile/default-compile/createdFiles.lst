@@ -1,4 +1,9 @@
+com\mycompany\lab4\Product.class
 com\mycompany\lab4\AdminRole.class
+com\mycompany\lab4\CustomerProduct.class
+com\mycompany\lab4\CustomerProductDatabase.class
 com\mycompany\lab4\EmployeeUser.class
 com\mycompany\lab4\EmployeeUserDatabase.class
+com\mycompany\lab4\ProductDatabase.class
+com\mycompany\lab4\EmployeeRole.class
 com\mycompany\lab4\Lab4.class

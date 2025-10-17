@@ -1,0 +1,2 @@
+P2394,Laptop,Apple,TechSupplier,10,1500 
+P2324,mobile,Apple,TechSupplier,10,1500 
