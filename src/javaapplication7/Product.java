@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package javaapplication6;
+package javaapplication7;
 
 /**
  *
@@ -40,14 +40,17 @@ public class Product implements NewInterface{
 
     @Override
     public String lineRepresentation() {
-        return productID + "," + productName + "," + manufacturerName + ","
+      String  s = productID + "," + productName + "," + manufacturerName + ","
                 + supplierName + "," + quantity + "," + price;
+      return s ; 
     }
 
     @Override
     public String getSearchKey() {
         return productID;
     }
+    
+   
     
     /*
     private String productID;
@@ -94,3 +97,4 @@ public void setPrice(float price) {
     
     
 }
+

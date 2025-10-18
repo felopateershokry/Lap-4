@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package javaapplication6;
+package javaapplication7;
 
 /**
  *
@@ -23,10 +23,12 @@ public class ProductDatabase extends Database<Product> {
         System.out.println("Invalid line format: " + line);
         return null;
     }
-        String supplierName = s[0] ;
-        String manufacturerName = s[1];
-        String productName = s[2];
-        String productID=s[3];
+        
+        String productID=s[0];
+        String supplierName = s[3] ;
+        String manufacturerName = s[2];
+        String productName = s[1];
+        
         int quantity = Integer.parseInt(s[4]);
         float price = Float.parseFloat(s[5]);
         
@@ -35,5 +37,16 @@ public class ProductDatabase extends Database<Product> {
        
         
     }
+    
+    public boolean contains(String key ){
+       for(Product emp : this.records){
+           if(emp.getSearchKey() == null ? key == null : emp.getSearchKey().equals(key)){
+                return true;
+            }  
+         }
+          return false ; 
+    }
+    
+    
     
 }

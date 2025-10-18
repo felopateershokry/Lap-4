@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package javaapplication6;
+package javaapplication7;
 
 /**
  *
@@ -22,5 +22,13 @@ public class EmployeeUserDatabase extends Database<EmployeeUser> {
         }
         return null;
     }
+     public boolean contains(String key ){
+         for(EmployeeUser emp : records){
+           if(emp.getSearchKey().equalsIgnoreCase(key)){
+                return true;
+            }  
+         }
+          return false ; 
+     } 
     
 }

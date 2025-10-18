@@ -2,8 +2,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package javaapplication6;
+package javaapplication7;
 
+/**
+ *
+ * @author GAMING
+ */
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -33,14 +37,7 @@ abstract class Database <T extends NewInterface >   //Generics + interface
         return this.records ; 
     }
     
-     public boolean contains(String key ){
-         for(T emp : records){
-           if(emp.getSearchKey().equalsIgnoreCase(key)){
-                return true;
-            }  
-         }
-          return false ; 
-     } 
+    
      
    
 
@@ -52,6 +49,7 @@ abstract class Database <T extends NewInterface >   //Generics + interface
             }
         }
         return null;
+      
       } 
     
      public void insertRecord(T record){
@@ -81,7 +79,7 @@ abstract class Database <T extends NewInterface >   //Generics + interface
  }
  
  void readFromFile() {
-       records.clear();
+      
 
         try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
             String line;
@@ -98,3 +96,4 @@ abstract class Database <T extends NewInterface >   //Generics + interface
      
     
 }
+

@@ -2,15 +2,16 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package javaapplication6;
+package javaapplication7;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+
+/**
+ *
+ * @author GAMING
+ */
+
 
 /**
  *
@@ -41,6 +42,27 @@ public class CustomerProductDataBase extends Database<CustomerProduct> {
        return cp;
     }
     
-       
+       public boolean contains(String key ){
+        if (key == null) return false;
+    String[] s = key.split(",");
+    if (s.length < 3) return false;
+
+    String targetSSN = s[0].trim();
+    String targetProductID = s[1].trim();
+    String targetDateStr = s[2].trim(); // expecting dd-MM-yyyy
+
+    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+
+    for (CustomerProduct cp : records) {
+        if (!targetSSN.equals(cp.getCustomerSSN())) continue;
+        if (!targetProductID.equals(cp.getProductID())) continue;
+        String cpDateStr = cp.getPurchaseDate().format(formatter); // format the stored LocalDate the same way
+        if (targetDateStr.equals(cpDateStr)) {
+            return true;
+        }
+    }
+    return false;
+    }
+
     
 }
